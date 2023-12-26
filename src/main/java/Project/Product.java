@@ -1,21 +1,24 @@
 package Project;
 
 public class Product {
-    private int serialNumber;
     private double price;
-    private String name, vendor, category;
+    private String name, vendor, category, serialNumber;
     //Fill the constructor as needed
     public Product() {
 
     }
-    public String PrintProduct(){
-        return "Serial Number: " + serialNumber + "Price: " + price + "Product Name: " + name + "Vendor: " + vendor + "Category: " + category;
+    public String printProduct() {
+        return String.format(
+                "Serial Number: %s, Price: %.2f, Product Name: %s, Vendor: %s, Category: %s",
+                serialNumber, price, name, vendor, category
+        );
     }
-    public int getSerialNumber() {
+
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(int serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 

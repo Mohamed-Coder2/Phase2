@@ -1,7 +1,7 @@
 package Project;
 
 public class Account {
-    private String userName, passWord, EMail;
+    private String username, password, Email;
     private double balance;
     private shoppingCart Cart;
 
@@ -14,27 +14,27 @@ public class Account {
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.username = userName;
     }
 
     public String getPassWord() {
-        return passWord;
+        return password;
     }
 
     public void setPassWord(String passWord) {
-        this.passWord = passWord;
+        this.password = passWord;
     }
 
     public String getEMail() {
-        return EMail;
+        return Email;
     }
 
     public void setEMail(String EMail) {
-        this.EMail = EMail;
+        this.Email = EMail;
     }
 
     public double getBalance() {

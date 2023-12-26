@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-// ProductController.java
+// ProductController
+// Handles the Post and Get for the Products, can Add one product at a time
+// but gets them all at once
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -26,3 +28,4 @@ public class ProductController {
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 }
+
