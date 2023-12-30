@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //A class representing all the products for a certain customer
 public class shoppingCart {
-    private ArrayList<Product> Cart;
+    private ArrayList<Product> Cart = new ArrayList<>();
 
     public shoppingCart() {
 

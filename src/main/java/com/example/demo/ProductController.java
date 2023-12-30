@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 // ProductController
 // Handles the Post and Get for the Products, can Add one product at a time
@@ -33,8 +34,15 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAllProducts() {
-        return new ResponseEntity<>(productsManager.getProducts(), HttpStatus.OK);
+    public ResponseEntity<Object> getAllProducts() {
+        List<Product> productList = productsManager.getProducts();
+        Map<String, Integer> categoryCount = productsManager.getCategoryCount();
+
+        CustomResponse customResponse = new CustomResponse(productList, categoryCount);
+        return new ResponseEntity<>(customResponse, HttpStatus.OK);
     }
 }
+
+
+
 

@@ -19,6 +19,10 @@ public class ProductsManager {
         }
     }
 
+    public HashMap<String, Integer> getCategoryCount() {
+        return categoryCount;
+    }
+
     public void updateCategoryCount() {
         categoryCount.clear(); // Clear the existing counts
 
