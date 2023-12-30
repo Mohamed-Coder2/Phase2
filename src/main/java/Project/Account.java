@@ -1,9 +1,10 @@
 package Project;
 
+//Each Customer has an Account which is defined here
 public class Account {
     private String username, password, Email;
-    private double balance;
-    private shoppingCart Cart;
+    private double balance; //can be defined from a third party Bank API
+    private shoppingCart Cart = new shoppingCart(); //For each account you can have one cart
 
     public shoppingCart getCart() {
         return Cart;
@@ -13,19 +14,19 @@ public class Account {
         Cart = cart;
     }
 
-    public String getUserName() {
+    public String getusername() {
         return username;
     }
 
-    public void setUserName(String userName) {
+    public void setusername(String userName) {
         this.username = userName;
     }
 
-    public String getPassWord() {
+    public String getpassword() {
         return password;
     }
 
-    public void setPassWord(String passWord) {
+    public void setpassword(String passWord) {
         this.password = passWord;
     }
 
