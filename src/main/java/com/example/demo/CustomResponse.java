@@ -5,6 +5,7 @@ import Project.Product;
 import java.util.List;
 import java.util.Map;
 
+//helper class for the ProductController GetMapping so it's organized as the way you see it
 public class CustomResponse {
     private List<Product> products;
     private Map<String, Integer> categories;
