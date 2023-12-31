@@ -3,10 +3,10 @@ package Project;
 import java.util.ArrayList;
 
 //A class representing all the products for a certain customer
-public class shoppingCart {
+public class ShoppingCart {
     private ArrayList<Product> Cart = new ArrayList<>();
 
-    public shoppingCart() {
+    public ShoppingCart() {
 
     }
     public void setProducts(ArrayList<Product> products) {

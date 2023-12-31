@@ -2,14 +2,14 @@ package Project;
 
 import java.util.ArrayList;
 
-public class SimpleOrder implements Order{
+public class CompoundOrders implements Order {
     private int orderID;
-    private Customer customer;
+    private ArrayList<Customer> customers;
     private ArrayList<Product> products;
 
-    public SimpleOrder(int orderID, Customer customer, ArrayList<Product> products) {
+    public CompoundOrders(int orderID, ArrayList<Customer> customers, ArrayList<Product> products) {
         this.orderID = orderID;
-        this.customer = customer;
+        this.customers = customers;
         this.products = products;
     }
 

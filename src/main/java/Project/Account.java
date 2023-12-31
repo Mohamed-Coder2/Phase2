@@ -4,45 +4,41 @@ package Project;
 public class Account {
     private String username, password, Email;
     private double balance; //can be defined from a third party Bank API
-    private shoppingCart Cart = new shoppingCart(); //For each account you can have one cart
+    private ShoppingCart Cart = new ShoppingCart(); //For each account you can have one cart
 
-    public shoppingCart getCart() {
-        return Cart;
-    }
 
-    public void setCart(shoppingCart cart) {
-        Cart = cart;
-    }
 
-    public String getusername() {
-        return username;
-    }
-
+    //Setters//
     public void setusername(String userName) {
         this.username = userName;
     }
-
-    public String getpassword() {
-        return password;
+    public void setCart(ShoppingCart cart) {
+        Cart = cart;
     }
-
     public void setpassword(String passWord) {
         this.password = passWord;
-    }
-
-    public String getEMail() {
-        return Email;
     }
 
     public void setEMail(String EMail) {
         this.Email = EMail;
     }
-
-    public double getBalance() {
-        return balance;
-    }
-
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+    //Getters//
+    public ShoppingCart getCart() {
+        return Cart;
+    }
+    public String getusername() {
+        return username;
+    }
+    public String getpassword() {
+        return password;
+    }
+    public String getEMail() {
+        return Email;
+    }
+    public double getBalance() {
+        return balance;
     }
 }
