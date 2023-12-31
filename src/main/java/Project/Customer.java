@@ -1,4 +1,8 @@
 package Project;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 //Customer class definition no methods here excepts setters and getters
 public class Customer {
     private Account account;
@@ -8,6 +12,7 @@ public class Customer {
     public Customer() {
 
     }
+
     //Setters
     //Methods aren't camel cased cause spring boot has an issue where it doesn't post correctly since it doesn't "see it"
     //I'll look further but now's not the time.

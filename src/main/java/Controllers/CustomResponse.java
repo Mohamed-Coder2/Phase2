@@ -1,4 +1,4 @@
-package com.example.demo;
+package Controllers;
 
 import Project.Product;
 

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.example.demo", "Project"})
+@ComponentScan(basePackages = {"com.example.demo", "Project", "Controllers"})
 public class Phase2Application {
 
 	public static void main(String[] args) {
