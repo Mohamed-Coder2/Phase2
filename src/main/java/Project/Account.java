@@ -6,8 +6,22 @@ public class Account {
     private double balance; //can be defined from a third party Bank API
     private ShoppingCart Cart = new ShoppingCart(); //For each account you can have one cart
 
+    public Account(String username, String password, String email, double balance) {
+        this.username = username;
+        this.password = password;
+        Email = email;
+        this.balance = balance;
+        Cart = new ShoppingCart();
+    }
 
-
+    public Account() {
+    }
+    public void deductBalance(double x){
+        balance -= x;
+    }
+    public void addBalance(double x){
+        balance += x;
+    }
     //Setters//
     public void setusername(String userName) {
         this.username = userName;

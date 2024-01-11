@@ -1,9 +1,10 @@
 package Project;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface Order {
     int getOrderID();
-    ArrayList<Customer> getCustomers();
-    ArrayList<Product> getProducts();
+    List<Customer> getCustomers();
+    List<Product> getProducts();
+    OrderStatus getOrderStatus();
 }

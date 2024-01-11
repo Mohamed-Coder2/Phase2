@@ -1,7 +1,6 @@
 package Project;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.List;
 
 //Customer class definition no methods here excepts setters and getters
 public class Customer {
@@ -11,6 +10,12 @@ public class Customer {
 
     public Customer() {
 
+    }
+
+    public Customer(Account account, int ID, String name) {
+        this.account = account;
+        this.ID = ID;
+        this.name = name;
     }
 
     //Setters

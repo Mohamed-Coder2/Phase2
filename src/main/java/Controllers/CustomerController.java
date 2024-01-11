@@ -14,7 +14,20 @@ import java.util.List;
 @RequestMapping("/")
 public class CustomerController {
 
-    private final List<Customer> customers = new ArrayList<>();
+    private final ArrayList<Customer> customers = new ArrayList<>();
+    Account acc1 = new Account("mohamed123","password123","Mohamed@gmail.com",10000);
+    Account acc2 = new Account("ahmed123","pass123","Ahmed@gmail.com",20000);
+    Account acc3 = new Account("Ali123","word123","Ali@gmail.com",30000);
+    Customer customer1 = new Customer(acc1,10001,"Mohamed");
+    Customer customer2 = new Customer(acc2, 10002, "Ahmed");
+    Customer customer3 = new Customer(acc3, 10003, "Ali");
+
+    public CustomerController() {
+        // Add predefined customers to the list
+        customers.add(customer1);
+        customers.add(customer2);
+        customers.add(customer3);
+    }
 
     @PostMapping("/signup")
     public ResponseEntity<String> signUpUser(@RequestBody Account account) {
@@ -23,13 +36,13 @@ public class CustomerController {
 
         // Set customer details
         newCustomer.setName(account.getusername());  // Set name as username for simplicity
-        newCustomer.setID(customers.size() + 1); // Assuming a simple incrementing ID
+        newCustomer.setID(customers.size() + 10000); // A simple incrementing ID
         newCustomer.setaccount(account);
 
         // Add the new customer to the list
         customers.add(newCustomer);
 
-        return new ResponseEntity<>("User signed up successfully", HttpStatus.CREATED);
+        return new ResponseEntity<>("User "+newCustomer.getname()+" signed up successfully", HttpStatus.CREATED);
     }
 
     @GetMapping("/customers")
